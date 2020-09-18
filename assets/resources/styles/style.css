@@ -11,7 +11,12 @@ header img{
     font-size: 90px;
     position: absolute;
     left: 47vw;
-    bottom: 30px;
+    bottom: 20px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.site-size{
+    display: flex;
+    width: 70%;
 }
