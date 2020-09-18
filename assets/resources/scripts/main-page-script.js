@@ -5,7 +5,7 @@
 var nome;
 window.onload = getNome();
 
-function getNome(msg){
+function getNome(){
     nome = window.prompt('Qual seu nome?')
     confirmacao()
    function confirmacao(){
@@ -14,7 +14,7 @@ function getNome(msg){
 }
 
 document.querySelector('#go-down-button').addEventListener('click', function(){
-        window.scrollTo(-150, document.body.scrollHeight);
+        window.scrollTo(-400, document.body.scrollHeight);
 })
 
 //Beneficios - Button
@@ -28,4 +28,18 @@ benefits = ["Fuga da rotina",
             "Criação de boas lembranças",
             "Vai fazer você se divertir!"
 ]
-var nextButton = document.getElementById('next-benefit')
+
+setInterval(function(){
+    var location = document.getElementById('benefits-space')
+    var i = 0;
+    console.log(benefits[i])
+    document.getElementById('benefits-space').innerHTML = benefits[i]
+    plusOne(i)
+},1000)
+
+function plusOne(num){
+    this.num =+ 1;
+}
+
+
+//eventos img-mouse

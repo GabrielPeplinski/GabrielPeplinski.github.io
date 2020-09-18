@@ -1,4 +1,4 @@
-header img{
+header img {
     width: 100%;
     height: 615px;
     object-fit: cover;
@@ -7,7 +7,7 @@ header img{
     display: flex;
 }
 
-#go-down-button{
+#go-down-button {
     font-size: 90px;
     position: absolute;
     left: 47vw;
@@ -16,7 +16,60 @@ header img{
     margin-right: auto;
 }
 
-.site-size{
+.site-size {
     display: flex;
-    width: 70%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.option-box-container {
+    justify-content: center;
+    padding: 1rem;
+    width: 30%;
+    height: 10%;
+    border: 1px;
+    flex-direction: row;
+    text-align: center;
+}
+
+#traveling-is-great-pic {
+    display: flex;
+    width: 100%;
+    align-content: center;
+}
+
+.box-container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 55%;
+    align-items: center;
+    border: 2px black solid;
+}
+
+main{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#textarea-first-article-h3{
+    text-align: center;
+}
+
+#benefits-space{
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+}
+
+#result-search{
+    display: none;
 }
