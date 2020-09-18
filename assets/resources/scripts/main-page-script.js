@@ -19,7 +19,7 @@ document.querySelector('#go-down-button').addEventListener('click', function(){
 })
 
 //Beneficios - Button
-//usar var inverted = benefits.inverse()
+//usar var inverted =
 benefits = ["Fuga da rotina",
             "Maior criatividade",
             "Maior confiança e autoestima",
@@ -31,16 +31,16 @@ benefits = ["Fuga da rotina",
             "Vai fazer você se divertir!"
 ]
 
-setInterval(function(){
+var i = 0;
+setInterval(function() {
+    function plusOne(){
     var location = document.getElementById('benefits-space')
-    var i = 0;
     console.log(benefits[i])
     document.getElementById('benefits-space').innerHTML = benefits[i]
-    function plusOne(num){
-        this.num =+ 1;
+    i++;
     }
-    plusOne(i)
-},1000)
+    plusOne();
+}, 5000)
 
 function getCidade(){
     window.alert('Tenho uma ótima notícia!Temos uma agência em sua cidade!😃')
