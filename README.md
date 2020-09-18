@@ -4,7 +4,7 @@
 
 **Caixas de Diálogo**
 
-- [ ] prompt
+- [x] prompt
 - [ ] alert
 - [ ] confirm
 
