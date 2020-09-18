@@ -9,7 +9,7 @@
 - [x] confirm
 
 **Temporizadores**
-- [ ] setInterval
+- [x] setInterval
 - [ ] setTimeout
 
 **Funções**
@@ -23,16 +23,16 @@
 - [x] Função Flecha - Arrow Function
 
 **Eventos**
-- [ ] Evento de carregamento do documento - onload
-- [ ] Evento de movimento do mouse
+- [x] Evento de carregamento do documento - onload
+- [x] Evento de movimento do mouse
 - [ ] Evento de teclado - usar charCode ou keyCode
 - [ ] Eventos de formulário - onfocus e onblur
 - [ ] Imprimir alguma propriedade do objeto event recebido como parâmetro
 - [ ] Propagação de eventos no modelo bolha (usar target e currentTarget, ou seja, disparar o evento em um elemento filho e capturar em um elemento pai)
 
 **Acesso aos elementos DOM do HTML**
-- [ ] Via referência DOM pelo id do elemento HTML
-- [ ] Via getElementByID()
+- [x] Via referência DOM pelo id do elemento HTML
+- [x] Via getElementByID()
 - [ ] Via getElementsByName()
 - [ ] Via getElementsByTagName()
 - [x] Via seletores CSS usados na função querySelector() ou querySelectorAll()
@@ -47,7 +47,7 @@
 - [ ] Usar pelo menos 3 métodos de manipulação de array
 - [ ] Usar laço de repetição (for..in ou for..of ou forEach)
 - [ ] Usar pelo menos 3 métodos para manipulação de string
-- [ ] String Template
+- [x] String Template
 
 **Objetos**
 - [ ] Criar objeto usando função construtora ou notação literal
