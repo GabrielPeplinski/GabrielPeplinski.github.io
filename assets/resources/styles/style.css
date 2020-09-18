@@ -41,7 +41,7 @@ header img {
     text-align: center;
 }
 
-.option-box-container > a{
+.option-box-container > a {
     color: white;
 }
 
@@ -51,7 +51,7 @@ header img {
     align-content: center;
 }
 
-.box-container{
+.box-container {
     margin-top: 20px;
     margin-bottom: 20px;
     flex-direction: column;
@@ -62,41 +62,42 @@ header img {
     border: 2px black solid;
 }
 
-main{
+main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
 
-#textarea-first-article-h3{
+#textarea-first-article-h3 {
     text-align: center;
 }
 
-#benefits-space{
+#benefits-space {
     text-align: center;
     font-style: italic;
     font-weight: bold;
 }
 
-nav{
+nav {
     width: 100%;
     background-color: gray;
     font-size: 20px;
 }
 
-.option-box-container
-:hover,
-:link,
-:active{
-    color:lightgreen;
+.option-box-container :hover,
+:active,
+:link {
+    color: lightgreen;
     text-decoration: none;
 }
 
-welcomeImg{
+welcomeImg {
     margin-top: 50px;
 }
 
-#anti-covid-19-pic{
-    height:70% ;
+#anti-covid-19-pic {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50%;
 }
