@@ -3,10 +3,11 @@
 })()
 
 var nome;
-window.onload = getNome();
+window.addEventListener('onload', getNome())
 
 function getNome(){
     nome = window.prompt('Qual seu nome?')
+    nome = nome.toUpperCase()
     confirmacao()
    function confirmacao(){
         var answer = window.confirm(`Olá, tudo bem!Então seu nome é ${nome} certo?`)
@@ -18,6 +19,7 @@ document.querySelector('#go-down-button').addEventListener('click', function(){
 })
 
 //Beneficios - Button
+//usar var inverted = benefits.inverse()
 benefits = ["Fuga da rotina",
             "Maior criatividade",
             "Maior confiança e autoestima",
@@ -34,12 +36,12 @@ setInterval(function(){
     var i = 0;
     console.log(benefits[i])
     document.getElementById('benefits-space').innerHTML = benefits[i]
+    function plusOne(num){
+        this.num =+ 1;
+    }
     plusOne(i)
 },1000)
 
-function plusOne(num){
-    this.num =+ 1;
+function getCidade(){
+    window.alert('Tenho uma ótima notícia!Temos uma agência em sua cidade!😃')
 }
-
-
-//eventos img-mouse
