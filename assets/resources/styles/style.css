@@ -62,7 +62,7 @@ header img {
     border: 2px black solid;
 }
 
-.box-container p{
+.box-container p {
     text-align: justify;
     text-indent: 25px;
 }
@@ -106,10 +106,25 @@ welcomeImg {
     max-width: 50%;
 }
 
-footer{
+footer {
     padding: 1rem;
     text-align: center;
     display: flex;
     flex-direction: column;
     background-color: gray;
+}
+
+.title {
+    background-color: gray;
+    font-size: 1.5em;
+    position: absolute;
+    color:black;
+    text-align: center;
+    margin-left: 80px;
+    top: 100px;
+    width: 400px;
+    line-height: 30px;
+    height: 80px;
+    font-family: 'Ranchers', cursive;
+    word-spacing: 15px;
 }

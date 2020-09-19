@@ -34,12 +34,6 @@ document.querySelector('#create-login-button').addEventListener('click', functio
     console.log(user)
 })
 
-function spaceSplit(nome){
-    this.nome = nome;
-    var nome = new String(nome);
-    return nome.split(' ', 2)
-}
-
 var form1 = document.querySelector('#nome').addEventListener('focus', ()=>{
     document.getElementById("nome").style.backgroundColor = "#EEAD0E";  
 })
