@@ -1,3 +1,55 @@
-html{
-    background-color: greenyellow;
+header {
+    padding: 2rem;
+    background-color: gray;
+}
+
+footer {
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+}
+
+.site-size {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.sign-in,
+.travel-for-sale-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 55%;
+    align-items: center;
+    border: 2px black solid;
+}
+
+.travel-for-sale-container img {
+    width: 100%;
+}
+
+.buy-button {
+    float: right;
+}
+
+.sign-in {
+    background-color: gray;
+    padding: 0.5rem;
+    align-items: center;
+    display: flex;
+}
+
+input {
+    padding: 0.2rem;
+    width: 300px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #999;
 }
