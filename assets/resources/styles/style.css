@@ -91,7 +91,6 @@ nav {
 }
 
 .option-box-container :hover,
-:active,
 :link {
     color: lightgreen;
     text-decoration: none;
