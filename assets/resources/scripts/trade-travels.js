@@ -8,7 +8,9 @@ class Usuario {
 class Cliente extends Usuario {
     constructor(nome, email, telefone) {
         super(nome, email);
-        this.telefone = telefone;
+        if(checkNumber === true){
+            this.telefone = telefone;
+        }
     }
 }
 
@@ -63,3 +65,36 @@ var buyButton = document.querySelector('#travelToEgipt').addEventListener('click
 })
 
 var travels = [];
+
+// FUNÇÃO COM PROBLEMA - IMPRESSÃO DAS VIAGENS COMPRADAS
+// function getTravels(){
+//     travels.forEach(e => {
+//         console.log(e.destino)
+//         return e.destino
+//     });
+// }
+
+// window.onkeydown = function(){
+//      var spaceToWrite = document.querySelector('.your-travels').innerHTML = getTravels()
+// };
+
+var screen = window;
+screen.onload = function(){
+    alert('Bem-vindo ao nosso site de Vendas😃');
+}
+
+var telefone;
+(function(){
+    setTimeout(function(){
+        telefone = prompt('Gostaria de nos dizer seu telefone?'); 
+    }, 3000);
+})()
+
+var checkNumber = false;
+var checkNumberFunction = function(){
+    if(telefone != null){
+        return checkNumber = true;
+    }else{
+        return checkNumber = false;
+    }
+}

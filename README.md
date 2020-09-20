@@ -10,7 +10,7 @@
 
 **Temporizadores**
 - [x] setInterval
-- [ ] setTimeout
+- [x] setTimeout
 
 **Funções**
 - [ ] Função anônima com argumento
@@ -39,7 +39,7 @@
 
 **Tratadores de Evento**
 - [x] Especificar o tratador de evento inline
-- [ ] Especificar o tratador de evento no carregamento da página HTML no modo tradicional - no onload
+- [x] Especificar o tratador de evento no carregamento da página HTML no modo tradicional - no onload
 - [x] Especificar o tratador de evento no carregamento da página HTML com a função addEventListener - no onload
 - [ ] Usar o operador this em funções tratadoras de eventos.
 

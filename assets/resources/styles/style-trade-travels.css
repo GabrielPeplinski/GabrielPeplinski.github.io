@@ -48,8 +48,15 @@ footer {
 
 input {
     padding: 0.2rem;
-    width: 300px;
+    width: 15rem;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     border: 1px solid #999;
+}
+
+.your-travels{
+    background-color: white;
+    float: rigth;
+    margin-left: 900px;
+    padding: 1rem;
 }
