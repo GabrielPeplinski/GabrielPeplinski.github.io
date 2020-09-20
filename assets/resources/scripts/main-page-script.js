@@ -14,7 +14,7 @@ function getNome(){
    }
 }
 
-document.querySelector('#go-down-button').addEventListener('click', function(){
+document.querySelector('#go-down-button').addEventListener('click', ()=>{
         window.scrollTo(-400, document.body.scrollHeight);
 })
 
@@ -49,7 +49,7 @@ setInterval(function() {
     function plusOne(){
     var location = document.getElementById('benefits-space')
     console.log(benefits[i])
-    document.getElementById('benefits-space').innerHTML = benefits[i]
+    location.innerHTML = benefits[i]
     i++;
     }
     plusOne();

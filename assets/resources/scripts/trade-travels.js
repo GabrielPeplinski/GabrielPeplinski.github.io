@@ -33,7 +33,6 @@ document.querySelector('#create-login-button').addEventListener('click', functio
     emailFromForm = document.querySelector('#email').value;
     var user = new Cliente(nomeFromForm, emailFromForm)
     users.push(user)
-    console.log(user)
 })
 
 var form1 = document.querySelector('#nome').addEventListener('focus', ()=>{
@@ -98,3 +97,7 @@ var checkNumberFunction = function(){
         return checkNumber = false;
     }
 }
+
+document.querySelector('#h2-create-user').addEventListener('mouseover', function(){
+    alert("Crie um Usuario!")
+})
