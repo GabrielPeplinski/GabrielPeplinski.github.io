@@ -53,14 +53,17 @@ var formEmail2 = document.querySelector('#email').addEventListener('blur',()=>{
 
 var buyButton = document.querySelector('#travelToVeneza').addEventListener('click', ()=>{
    travels.push( new Travel("Veneza"))
+   getLastTravel('Veneza')
 })
 
 var buyButton = document.querySelector('#travelToLondon').addEventListener('click', ()=>{
     travels.push(new Travel("London"))
+    getLastTravel('Londres')
 })
 
 var buyButton = document.querySelector('#travelToEgipt').addEventListener('click', ()=>{
     travels.push(new Travel("Egipt"))
+    getLastTravel('Egito')
 })
 
 var travels = [];
@@ -74,8 +77,7 @@ var travels = [];
 // }
 
 // window.onkeydown = function(){
-//      var spaceToWrite = document.querySelector('.your-travels').innerHTML = getTravels()
-// };
+//    var spaceToWrite = document.querySelector('.your-travels').innerHTML = getTravels() };
 
 var screen = window;
 screen.onload = function(){
