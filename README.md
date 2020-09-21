@@ -14,8 +14,8 @@
 
 **Funções**
 - [ ] Função anônima com argumento
-- [ ] Função anônima sem argumento
-- [ ] Função anônima com retorno
+- [x] Função anônima sem argumento
+- [x] Função anônima com retorno
 - [x] Função auto-executável
 - [x] Função com nome
 - [x] Função aninhada/local - declarar uma função dentro de outra
@@ -32,8 +32,8 @@
 **Acesso aos elementos DOM do HTML**
 - [x] Via referência DOM pelo id do elemento HTML
 - [x] Via getElementByID()
-- [ ] Via getElementsByName()
-- [ ] Via getElementsByTagName()
+- [x] Via getElementsByName()
+- [x] Via getElementsByTagName()
 - [x] Via seletores CSS usados na função querySelector() ou querySelectorAll()
 
 **Tratadores de Evento**

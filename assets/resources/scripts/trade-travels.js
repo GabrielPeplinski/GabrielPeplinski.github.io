@@ -29,9 +29,12 @@ var nomeFromForm;
 var emailFromForm;
 var users = [];
 document.querySelector('#create-login-button').addEventListener('click', function (){
-    nomeFromForm = document.querySelector('#nome').value;
-    emailFromForm = document.querySelector('#email').value;
-    var user = new Cliente(nomeFromForm, emailFromForm)
+    var getUserName = document.getElementsByTagName('input')[0]
+    nomeFromForm = getUserName.value
+    var getUserEmail = document.getElementsByName('form2')
+    emailFromForm = getUserEmail[0].value;
+    var user = new Cliente(nomeFromForm, emailFromForm.toLowerCase())
+    console.log(user)
     users.push(user)
 })
 
@@ -52,18 +55,24 @@ var formEmail2 = document.querySelector('#email').addEventListener('blur',()=>{
 })
 
 var buyButton = document.querySelector('#travelToVeneza').addEventListener('click', ()=>{
-   travels.push( new Travel("Veneza"))
-   getLastTravel('Veneza')
+    if (checkUsuario() == true){
+        travels.push( new Travel("Veneza"))
+        alert('Compra efetivada!')
+    }
 })
 
 var buyButton = document.querySelector('#travelToLondon').addEventListener('click', ()=>{
-    travels.push(new Travel("London"))
-    getLastTravel('Londres')
+    if (checkUsuario() == true){
+        travels.push(new Travel("London"))
+        alert('Compra efetivada!')
+    }
 })
 
 var buyButton = document.querySelector('#travelToEgipt').addEventListener('click', ()=>{
-    travels.push(new Travel("Egipt"))
-    getLastTravel('Egito')
+    if (checkUsuario() == true){
+        travels.push(new Travel("Egipt"))
+        alert('Compra efetivada!')
+    }
 })
 
 var travels = [];
@@ -101,5 +110,29 @@ var checkNumberFunction = function(){
 }
 
 document.querySelector('#h2-create-user').addEventListener('mouseover', function(){
-    alert("Crie um Usuario!")
+    alert("Crie um Usuario para efetuar compras!")
 })
+
+//Controle de compra de viagens
+var checkUsuario = function(){
+    if( checkIfUsuarioIsAnyUserIsCreated() == false){
+        window.alert("AVISO:É necessário criar um usuário para efetivar a compra!")
+        return false;
+    }else if( checkIfUsuarioIsAnyUserIsCreated() == true){
+        return true;
+    }
+}
+
+var checkIfUsuarioIsAnyUserIsCreated= function(){
+    if(users.length == 0){
+        return false
+    }else{
+        return true
+    }
+}
+
+var coments = [];
+function getComentTradePage(comentSpace){
+    var coment = comentSpace;
+    coments.push(coment)
+}

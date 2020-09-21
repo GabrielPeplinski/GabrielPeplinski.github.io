@@ -15,7 +15,7 @@ function getNome(){
 }
 
 document.querySelector('#go-down-button').addEventListener('click', ()=>{
-        window.scrollTo(-400, document.body.scrollHeight);
+        window.scrollTo(0, 630)
 })
 
 //Beneficios - Button

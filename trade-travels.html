@@ -17,21 +17,20 @@
                 Bonfim Viagens
                 <i class="fas fa-plane"></i>
             </div>
-            <div class="your-travels">
-            </div>
+            <div class="username"></div>
         </header>
-        <menu>
-            <div class="site-size">
+        <div class="site-size">
+            <menu>
                 <article class="sign-in">
                     <h2 id="h2-create-user">Crie seu Usuário:</h2>
                     <form>
                         <div class="form-space">
                             <label for="nome">Nome:</label>
-                            <input type="text" id="nome">
+                            <input type="text" id="nome" name="form1">
                         </div>
                         <div class="form-space">
                             <label for="email">Email:</label>
-                            <input type="text" id="email">
+                            <input type="text" id="email" name="form2">
                         </div>
                     </form>
                     <button id="create-login-button">Criar Usuário</button>
@@ -69,8 +68,13 @@
                         </figcaption>
                     </figure>
                 </article>
+            </menu>
+            <hr>
+            <div id="addComent">
+                <p>Tem alguma ideia de viagem?Deixe um comentário e clique duas vezes no espaço para escrever</p>
+                <textarea id="comentSpace" ondblclick="postComentTradePage(comentSpace.value)"></textarea>
             </div>
-        </menu>
+        </div>
         <footer id="footer-trade-travels">
             <strong>Bonfim Viagens</strong><br>
             <span>Todos os direitos reservados</span>
