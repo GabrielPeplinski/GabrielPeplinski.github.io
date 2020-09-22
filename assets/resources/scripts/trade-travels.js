@@ -115,15 +115,15 @@ document.querySelector('#h2-create-user').addEventListener('mouseover', function
 
 //Controle de compra de viagens
 var checkUsuario = function(){
-    if( checkIfUsuarioIsAnyUserIsCreated() == false){
+    if( checkIfIsAnyUserIsCreated() == false){
         window.alert("AVISO:É necessário criar um usuário para efetivar a compra!")
         return false;
-    }else if( checkIfUsuarioIsAnyUserIsCreated() == true){
+    }else if( checkIfIsAnyUserIsCreated() == true){
         return true;
     }
 }
 
-var checkIfUsuarioIsAnyUserIsCreated= function(){
+var checkIfIsAnyUserIsCreated= function(){
     if(users.length == 0){
         return false
     }else{
