@@ -31,27 +31,31 @@ var users = [];
 document.querySelector('#create-login-button').addEventListener('click', function (){
     var getUserName = document.getElementsByTagName('input')[0]
     nomeFromForm = getUserName.value
+    nomeSub = nomeFromForm.substring(0, 1);
+    nomeSub2 = nomeFromForm.substring(1,nomeFromForm.length);
+    nomeSub = nomeSub.toUpperCase();
+    nomeFull = nomeSub + nomeSub2;
     var getUserEmail = document.getElementsByName('form2')
     emailFromForm = getUserEmail[0].value;
-    var user = new Cliente(nomeFromForm, emailFromForm.toLowerCase())
-    console.log(user)
+    var user = new Cliente(nomeFull, emailFromForm.toLowerCase())
     users.push(user)
+    alert('Usuário criado com sucesso!')
 })
 
-var form1 = document.querySelector('#nome').addEventListener('focus', ()=>{
+var formNome = document.querySelector('#nome')
+formNome.addEventListener('focus', ()=>{
     document.getElementById("nome").style.backgroundColor = "#EEAD0E";  
 })
-
-var form2 = document.querySelector('#nome').addEventListener('blur',()=>{
+formNome.addEventListener('blur',()=>{
     document.getElementById("nome").style.backgroundColor = "#CFCFCF";
 })
 
-var formEmail1 = document.querySelector('#email').addEventListener('focus',()=>{
+var formEmail = document.querySelector('#email')
+formEmail.addEventListener('focus',()=>{
     document.getElementById('email').style.backgroundColor = "#EEAD0E";
 })
-
-var formEmail2 = document.querySelector('#email').addEventListener('blur',()=>{
-    document.getElementById('email').style.backgroundColor = "#CFCFCF"
+formEmail.addEventListener('blur',()=>{
+    document.getElementById('email').style.backgroundColor = "#CFCFCF";
 })
 
 var buyButton = document.querySelector('#travelToVeneza').addEventListener('click', ()=>{
@@ -76,17 +80,6 @@ var buyButton = document.querySelector('#travelToEgipt').addEventListener('click
 })
 
 var travels = [];
-
-// FUNÇÃO COM PROBLEMA - IMPRESSÃO DAS VIAGENS COMPRADAS
-// function getTravels(){
-//     travels.forEach(e => {
-//         console.log(e.destino)
-//         return e.destino
-//     });
-// }
-
-// window.onkeydown = function(){
-//    var spaceToWrite = document.querySelector('.your-travels').innerHTML = getTravels() };
 
 var screen = window;
 screen.onload = function(){
@@ -136,4 +129,17 @@ function postComentTradePage(comentSpace){
     var coment = comentSpace;
     coments.push(coment)
     alert("Muito obrigado por deixar um comentário!")
+}
+
+document.querySelector('body').addEventListener('keydown', ()=>{
+    var key = event.keyCode;
+    if (key == 27){
+        getTravels()
+    }
+})
+
+function getTravels(){
+    travels.forEach(e=>{
+        alert(e.destino)
+    })
 }

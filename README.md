@@ -25,7 +25,7 @@
 **Eventos**
 - [x] Evento de carregamento do documento - onload
 - [x] Evento de movimento do mouse
-- [ ] Evento de teclado - usar charCode ou keyCode
+- [x] Evento de teclado - usar charCode ou keyCode
 - [x] Eventos de formulário - onfocus e onblur
 - [ ] Imprimir alguma propriedade do objeto event recebido como parâmetro
 
@@ -44,8 +44,8 @@
 
 **Objetos Nativos**
 - [x] Usar pelo menos 3 métodos de manipulação de array
-- [ ] Usar laço de repetição (for..in ou for..of ou forEach)
-- [ ] Usar pelo menos 3 métodos para manipulação de string
+- [x] Usar laço de repetição (for..in ou for..of ou forEach)
+- [x] Usar pelo menos 3 métodos para manipulação de string
 - [x] String Template
 
 **Objetos**
