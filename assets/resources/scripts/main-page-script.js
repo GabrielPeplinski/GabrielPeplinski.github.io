@@ -53,7 +53,7 @@ setInterval(function() {
     i++;
     }
     plusOne();
-}, 5000)
+}, 3000)
 
 function getCidade(){
     window.alert('Tenho uma ótima notícia!Temos uma agência em sua cidade!😃')
