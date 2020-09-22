@@ -132,7 +132,8 @@ var checkIfUsuarioIsAnyUserIsCreated= function(){
 }
 
 var coments = [];
-function getComentTradePage(comentSpace){
+function postComentTradePage(comentSpace){
     var coment = comentSpace;
     coments.push(coment)
+    alert("Muito obrigado por deixar um comentário!")
 }
