@@ -48,7 +48,6 @@ var benefits = benefits1.concat(benefits2).reverse();
 setInterval(function() {
     function plusOne(){
     var location = document.getElementById('benefits-space')
-    console.log(benefits[i])
     location.innerHTML = benefits[i]
     i++;
     }
