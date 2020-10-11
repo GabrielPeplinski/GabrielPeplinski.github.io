@@ -35,10 +35,6 @@ footer {
     width: 100%;
 }
 
-.buy-button {
-    float: right;
-}
-
 .sign-in {
     background-color: gray;
     padding: 0.5rem;
@@ -66,4 +62,21 @@ input {
 
 textarea{
     max-width: 100px;
+}
+
+#create-login-button, .buy-buttom{
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    padding: 0.2em;
+}
+
+#create-login-button:hover{
+    box-shadow: 0 0 40px 40px #EEAD0E inset;
+    border: 2px solid black;
+    font-weight: bold;
+}
+
+.buy-buttom:hover{
+    box-shadow: 0 0 40px 40px #EEAD0E inset;
+    border: 2px solid black;
+    font-weight: bold;
 }
