@@ -28,15 +28,17 @@ let Travel = function(destino){
 var nomeFromForm;
 var emailFromForm;
 let users = [];
+let getUserName = document.getElementsByTagName('input')[0]
+let getUserEmail = document.getElementsByName('form2')[0]
 document.querySelector('#create-login-button').addEventListener('click', function (){
-    var getUserName = document.getElementsByTagName('input')[0]
+    // var getUserName = document.getElementsByTagName('input')[0]
     nomeFromForm = getUserName.value
     nomeSub = nomeFromForm.substring(0, 1);
     nomeSub2 = nomeFromForm.substring(1,nomeFromForm.length);
     nomeSub = nomeSub.toUpperCase();
     nomeFull = nomeSub + nomeSub2;
-    var getUserEmail = document.getElementsByName('form2')
-    emailFromForm = getUserEmail[0].value;
+    // var getUserEmail = document.getElementsByName('form2')
+    emailFromForm = getUserEmail.value;
     var user = new Cliente(nomeFull, emailFromForm.toLowerCase())
     users.push(user)
     alert('Usuário criado com sucesso!')
@@ -165,3 +167,20 @@ let h2CreateUserMessage = document.querySelector('#h2-create-user');
 document.querySelector('.sign-in').addEventListener('mouseout', ()=>{
     h2CreateUserMessage.innerHTML = "Crie seu Usuário:"
 })
+
+// getUserName.onsubmit = function(){
+//     if(getUserName != null){
+//         return true
+//     }else{
+//         window.alert('AVISO!O nome do usuário e o email não podem ser vazios!')
+//     }
+// }
+
+// getUserEmail.onsubmit = function(){
+//     if(getUserEmail != null && getUserEmail != null){
+//         return true
+//     }else{
+//         window.alert('AVISO!O nome do usuário e o email não podem ser vazios!')
+//         return false
+//     }
+// }
