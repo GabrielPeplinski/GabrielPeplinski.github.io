@@ -70,10 +70,10 @@
 - [ ] Customizar as mensagens nos balões de mensagem
 - [ ] Usar os atributos de validação dos inputs
 - [ ] Usar expressões regulares
-- [ ] Ler e escrever em elementos input com a propriedade value
-- [ ] Alterar o conteúdo de elementos div ou p com a propriedade innerHTML ou textContent
+- [x] Ler e escrever em elementos input com a propriedade value
+- [x] Alterar o conteúdo de elementos div ou p com a propriedade innerHTML ou textContent
 - [ ] Manipulação de elemento de listagem, como checkbox, radio ou select
-- [ ] Acesso aos elementos de um formulário via hierarquia (caminho) de objetos, ou seja, array forms e elements
+- [x] Acesso aos elementos de um formulário via hierarquia (caminho) de objetos, ou seja, array forms e elements
 
 **jQuery**
 - [ ] Uso de seletores CSS - id, classe e tag

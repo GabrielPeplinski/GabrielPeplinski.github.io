@@ -27,7 +27,7 @@ let Travel = function(destino){
 
 var nomeFromForm;
 var emailFromForm;
-var users = [];
+let users = [];
 document.querySelector('#create-login-button').addEventListener('click', function (){
     var getUserName = document.getElementsByTagName('input')[0]
     nomeFromForm = getUserName.value
@@ -143,3 +143,25 @@ function getTravels(){
         alert(e.destino)
     })
 }
+
+window.onload = ()=>{
+    document.forms[1].elements[0].value = 'Deixe seu comentário!'
+}
+
+document.querySelector('#comentSpace').addEventListener('focus', ()=>{
+    window.document.forms.commentSection.comentSpace.value = '';
+})
+
+document.querySelector('#comentSpace').addEventListener('blur', ()=>{
+    window.document.forms.commentSection.comentSpace.value = 'Deixe seu comentário!';
+})
+ 
+let h2CreateUserMessage = document.querySelector('#h2-create-user');
+
+ document.querySelector('.sign-in').addEventListener('mouseover', ()=>{
+    h2CreateUserMessage.innerHTML = "Criando Usuário..."
+})
+
+document.querySelector('.sign-in').addEventListener('mouseout', ()=>{
+    h2CreateUserMessage.innerHTML = "Crie seu Usuário:"
+})
