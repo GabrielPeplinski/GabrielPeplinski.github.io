@@ -25,8 +25,8 @@ let Travel = function(destino){
     this.destino = destino;
 }
 
-var nomeFromForm;
-var emailFromForm;
+let nomeFromForm;
+let emailFromForm;
 let users = [];
 let getUserName = document.getElementsByTagName('input')[0]
 let getUserEmail = document.getElementsByName('form2')[0]
@@ -44,7 +44,7 @@ document.querySelector('#create-login-button').addEventListener('click', functio
     alert('Usuário criado com sucesso!')
 })
 
-var formNome = document.querySelector('#nome')
+let formNome = document.querySelector('#nome')
 formNome.addEventListener('focus', ()=>{
     document.getElementById("nome").style.backgroundColor = "#EEAD0E";  
 })
@@ -52,7 +52,7 @@ formNome.addEventListener('blur',()=>{
     document.getElementById("nome").style.backgroundColor = "#CFCFCF";
 })
 
-var formEmail = document.querySelector('#email')
+let formEmail = document.querySelector('#email')
 formEmail.addEventListener('focus',()=>{
     document.getElementById('email').style.backgroundColor = "#EEAD0E";
 })
@@ -81,21 +81,21 @@ var buyButton = document.querySelector('#travelToEgipt').addEventListener('click
     }
 })
 
-var travels = [];
+let travels = [];
 
-var screen = window;
+let screen = window;
 screen.onload = function(){
     alert('Bem-vindo ao nosso site de Vendas😃');
 }
 
-var telefone;
+let telefone;
 (function(){
     setTimeout(function(){
         telefone = prompt('Gostaria de nos dizer seu telefone?'); 
     }, 3000);
 })()
 
-var checkNumber = false;
+let checkNumber = false;
 var checkNumberFunction = function(){
     if(telefone != null){
         return checkNumber = true;
@@ -126,7 +126,7 @@ var checkIfIsAnyUserIsCreated= function(){
     }
 }
 
-var coments = [];
+let coments = [];
 function postComentTradePage(comentSpace){
     var coment = comentSpace;
     coments.push(coment)

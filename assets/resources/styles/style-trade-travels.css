@@ -80,3 +80,8 @@ textarea{
     border: 2px solid black;
     font-weight: bold;
 }
+
+#h2-create-user{
+    font-size: 1.3rem;
+    font-weight: bold;
+}

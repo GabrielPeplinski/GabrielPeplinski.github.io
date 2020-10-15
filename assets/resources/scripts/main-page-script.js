@@ -2,7 +2,7 @@
     window.alert('✈Bem-vindo ao Bonfim Viagens✈')
 })()
 
-var nome;
+let nome;
 window.addEventListener('onload', getNome())
 
 function getNome(){
@@ -43,8 +43,8 @@ benefits2 = [
             "Vai fazer você se divertir!"
 ]
 
-var i = 0;
-var benefits = benefits1.concat(benefits2).reverse();
+let i = 0;
+let benefits = benefits1.concat(benefits2).reverse();
 setInterval(function() {
     function plusOne(){
     var location = document.getElementById('benefits-space')
