@@ -129,20 +129,29 @@ footer {
     word-spacing: 15px;
 }
 
-/* Tamanho do título para dispositivos mobile */
+/* Tamanho do título e botão para dispositivos mobile */
 @media screen and (max-width: 576px){
     .title{
     background-color: gray;
-    font-size: 0.9em;
+    font-size: 1em;
     position: absolute;
     color:black;
     text-align: center;
     margin-left: 20px;
     top: 80px;
-    width: 300px;
-    line-height: 30px;
+    width: 250px;
+    line-height: 15px;
     height: 80px;
     font-family: 'Ranchers', cursive;
     word-spacing: 15px;
+    }
+
+    #go-down-button {
+        font-size: 80px;
+        position: absolute;
+        left: 30vw;
+        bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
