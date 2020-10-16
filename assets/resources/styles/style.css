@@ -128,3 +128,21 @@ footer {
     font-family: 'Ranchers', cursive;
     word-spacing: 15px;
 }
+
+/* Tamanho do título para dispositivos mobile */
+@media screen and (max-width: 576px){
+    .title{
+    background-color: gray;
+    font-size: 0.9em;
+    position: absolute;
+    color:black;
+    text-align: center;
+    margin-left: 20px;
+    top: 80px;
+    width: 300px;
+    line-height: 30px;
+    height: 80px;
+    font-family: 'Ranchers', cursive;
+    word-spacing: 15px;
+    }
+}
