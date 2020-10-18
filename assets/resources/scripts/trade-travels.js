@@ -60,21 +60,21 @@ formEmail.addEventListener('blur',()=>{
     document.getElementById('email').style.backgroundColor = "#CFCFCF";
 })
 
-var buyButton = document.querySelector('#travelToVeneza').addEventListener('click', ()=>{
+let buyButton = document.querySelector('#travelToVeneza').addEventListener('click', ()=>{
     if (checkUsuario() == true){
         travels.push( new Travel("Veneza"))
         alert('Compra efetivada!')
     }
 })
 
-var buyButton = document.querySelector('#travelToLondon').addEventListener('click', ()=>{
+let buyButton = document.querySelector('#travelToLondon').addEventListener('click', ()=>{
     if (checkUsuario() == true){
         travels.push(new Travel("London"))
         alert('Compra efetivada!')
     }
 })
 
-var buyButton = document.querySelector('#travelToEgipt').addEventListener('click', ()=>{
+let buyButton = document.querySelector('#travelToEgipt').addEventListener('click', ()=>{
     if (checkUsuario() == true){
         travels.push(new Travel("Egipt"))
         alert('Compra efetivada!')
@@ -96,7 +96,7 @@ let telefone;
 })()
 
 let checkNumber = false;
-var checkNumberFunction = function(){
+let checkNumberFunction = function(){
     if(telefone != null){
         return checkNumber = true;
     }else{
@@ -109,7 +109,7 @@ document.querySelector('#h2-create-user').addEventListener('mouseover', function
 })
 
 //Controle de compra de viagens
-var checkUsuario = function(){
+let checkUsuario = function(){
     if( checkIfIsAnyUserIsCreated() == false){
         window.alert("AVISO:É necessário criar um usuário para efetivar a compra!")
         return false;
@@ -118,7 +118,7 @@ var checkUsuario = function(){
     }
 }
 
-var checkIfIsAnyUserIsCreated= function(){
+let checkIfIsAnyUserIsCreated= function(){
     if(users.length == 0){
         return false
     }else{
@@ -168,19 +168,3 @@ document.querySelector('.sign-in').addEventListener('mouseout', ()=>{
     h2CreateUserMessage.innerHTML = "Crie seu Usuário:"
 })
 
-// getUserName.onsubmit = function(){
-//     if(getUserName != null){
-//         return true
-//     }else{
-//         window.alert('AVISO!O nome do usuário e o email não podem ser vazios!')
-//     }
-// }
-
-// getUserEmail.onsubmit = function(){
-//     if(getUserEmail != null && getUserEmail != null){
-//         return true
-//     }else{
-//         window.alert('AVISO!O nome do usuário e o email não podem ser vazios!')
-//         return false
-//     }
-// }
