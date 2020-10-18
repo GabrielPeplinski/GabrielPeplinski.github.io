@@ -130,17 +130,17 @@ footer {
 }
 
 /* Tamanho do título e botão para dispositivos mobile */
-@media screen and (max-width: 576px){
+@media only screen and (max-width: 320px){
     .title{
     background-color: gray;
-    font-size: 1em;
+    font-size: 0.9em;
     position: absolute;
     color:black;
     text-align: center;
-    margin-left: 49%;
-    top: 80px;
+    margin-left:25px;
+    top: 70px;
     width: 250px;
-    height: 80px;
+    height: 70px;
     font-family: 'Ranchers', cursive;
     word-spacing: 15px;
     }
@@ -148,8 +148,8 @@ footer {
     #go-down-button {
         font-size: 80px;
         position: absolute;
-        left: 49%;
-        bottom: 20px;
+        left: 128px;
+        bottom: 5px;
         margin-left: auto;
         margin-right: auto;
     }
