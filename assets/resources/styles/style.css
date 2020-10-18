@@ -130,7 +130,7 @@ footer {
 }
 
 /* Tamanho do título e botão para dispositivos mobile */
-@media only screen and (max-width: 546px){
+@media screen and (max-width: 546px){
     .title{
     background-color: gray;
     font-size: 0.9em;
