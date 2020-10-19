@@ -60,21 +60,21 @@ formEmail.addEventListener('blur',()=>{
     document.getElementById('email').style.backgroundColor = "#CFCFCF";
 })
 
-let buyButton = document.querySelector('#travelToVeneza').addEventListener('click', ()=>{
+var buyButton = document.querySelector('#travelToVeneza').addEventListener('click', ()=>{
     if (checkUsuario() == true){
         travels.push( new Travel("Veneza"))
         alert('Compra efetivada!')
     }
 })
 
-let buyButton = document.querySelector('#travelToLondon').addEventListener('click', ()=>{
+var buyButton = document.querySelector('#travelToLondon').addEventListener('click', ()=>{
     if (checkUsuario() == true){
         travels.push(new Travel("London"))
         alert('Compra efetivada!')
     }
 })
 
-let buyButton = document.querySelector('#travelToEgipt').addEventListener('click', ()=>{
+var buyButton = document.querySelector('#travelToEgipt').addEventListener('click', ()=>{
     if (checkUsuario() == true){
         travels.push(new Travel("Egipt"))
         alert('Compra efetivada!')
@@ -96,7 +96,7 @@ let telefone;
 })()
 
 let checkNumber = false;
-let checkNumberFunction = function(){
+var checkNumberFunction = function(){
     if(telefone != null){
         return checkNumber = true;
     }else{
@@ -109,7 +109,7 @@ document.querySelector('#h2-create-user').addEventListener('mouseover', function
 })
 
 //Controle de compra de viagens
-let checkUsuario = function(){
+var checkUsuario = function(){
     if( checkIfIsAnyUserIsCreated() == false){
         window.alert("AVISO:É necessário criar um usuário para efetivar a compra!")
         return false;
@@ -118,7 +118,7 @@ let checkUsuario = function(){
     }
 }
 
-let checkIfIsAnyUserIsCreated= function(){
+var checkIfIsAnyUserIsCreated= function(){
     if(users.length == 0){
         return false
     }else{

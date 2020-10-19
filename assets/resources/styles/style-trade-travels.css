@@ -85,3 +85,12 @@ textarea{
     font-size: 1.3rem;
     font-weight: bold;
 }
+
+.hotelStars{
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 2%;
+}
