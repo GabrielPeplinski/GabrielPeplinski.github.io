@@ -86,11 +86,17 @@ textarea{
     font-weight: bold;
 }
 
-.hotelStars{
+.stars{
     font-size: 12px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
     align-items: center;
     margin-bottom: 2%;
+}
+
+.aboutLocationP{
+    text-align: justify;
+    text-indent: 3%;
+    font-style: italic;
 }

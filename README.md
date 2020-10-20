@@ -65,7 +65,7 @@
 - [x] Nomes de arquivos minúsculos e separados por hífen (dashed-case)
 
 **Formulário**
-- [ ] Validação de formulário com onsubmit usando os métodos tradicionais
+- [x] Validação de formulário com onsubmit usando os métodos tradicionais
 - [ ] Validação de formulário com HTML5 API
 - [ ] Customizar as mensagens nos balões de mensagem
 - [ ] Usar os atributos de validação dos inputs

@@ -21,8 +21,9 @@ class Admin extends Usuario {
     }
 }
 
-let Travel = function(destino){
+let Travel = function(destino, dias){
     this.destino = destino;
+    this.dias = dias;
 }
 
 let nomeFromForm;
@@ -60,16 +61,20 @@ formEmail.addEventListener('blur',()=>{
     document.getElementById('email').style.backgroundColor = "#CFCFCF";
 })
 
-var buyButton = document.querySelector('#travelToVeneza').addEventListener('click', ()=>{
-    if (checkUsuario() == true){
-        travels.push( new Travel("Veneza"))
+var buyButtonVeneza = document.querySelector('#checkDaysInVeneza').addEventListener('submit', function(e){
+    let daysVeneza = document.forms[1].numDays1.value;
+    e.preventDefault()
+    if ((checkUsuario() == true) && (checkDay1 == true)){
+        travels.push( new Travel("Veneza",daysVeneza))
         alert('Compra efetivada!')
     }
 })
 
-var buyButton = document.querySelector('#travelToLondon').addEventListener('click', ()=>{
-    if (checkUsuario() == true){
-        travels.push(new Travel("London"))
+var buyButtonVeneza = document.querySelector('#checkDaysInLondon').addEventListener('submit', function(e){
+    let daysLondon = document.forms[2].numDays2.value;
+    e.preventDefault()
+    if ((checkUsuario() == true) && (checkDay1 == true)){
+        travels.push( new Travel("Londres",daysLondon))
         alert('Compra efetivada!')
     }
 })
@@ -142,7 +147,7 @@ document.querySelector('body').addEventListener('keydown', ()=>{
 
 function getTravels(){
     travels.forEach(e=>{
-        alert(e.destino)
+        alert("Destino:"+ e.destino + ", " + e.dias + " dias")
     })
 }
 
@@ -168,3 +173,27 @@ document.querySelector('.sign-in').addEventListener('mouseout', ()=>{
     h2CreateUserMessage.innerHTML = "Crie seu Usuário:"
 })
 
+// Função de Validação Modo Tradicional
+let checkDay1 = false
+function checkDays1(){
+    let daysValue = document.forms[1].numDays1.value;
+    if((daysValue < 0) || (daysValue > 10) || (daysValue == null) || (daysValue == "")){
+        checkDay1 = false;
+        return false;
+    }else{
+        checkDay1 = true;
+        return true;
+    }
+}
+
+let checkDay2 = false
+function checkDays2(){
+    let daysValue = document.forms[2].numDays2.value;
+    if((daysValue < 0) || (daysValue > 10) || (daysValue == null) || (daysValue == "")){
+        checkDay1 = false;
+        return false;
+    }else{
+        checkDay1 = true;
+        return true;
+    }
+}
