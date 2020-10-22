@@ -197,3 +197,26 @@ function checkDays2(){
         return true;
     }
 }
+
+// Validação usando API HTML 5
+//  FIX THIS
+function checkDays3(){
+    let inputCamp = document.querySelector('#daysInEgipt');
+
+    inputCamp.addEventListener('blur', function(){
+        if((this.validity.valueMissing) && (this.validity.valid)){
+            alert('Compra efetivada!')
+        }
+    })
+
+    inputCamp.addEventListener('invalid', function(e){
+        
+    })
+} 
+
+// Caso inválidos os dados do input, não permite mensagens padrão do navegador
+window.onload = function(){
+    document.querySelector('#daysInEgipt').addEventListener('invalid', function(e){
+        e.preventDefault()
+    })
+}

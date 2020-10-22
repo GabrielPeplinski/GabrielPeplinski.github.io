@@ -39,15 +39,19 @@
                         <img src="assets/resources/images/place1-pic.jpg" alt="travel-pic-1">
                         <figcaption>
                             <h2>Veneza</h2>
-                            <p  class="aboutLocationP" id="veneza-p">
-                                Veneza (Venezia, em italiano), com 338 mil habitantes, é uma das mais belas cidades do mundo - e também uma das mais turísticas.<br>
-                                A cidade é um museu a céu aberto, romântico em nível quase inimaginável e atrai multidões de turistas o ano inteiro. Construída no século V sobre uma lagoa, Veneza é um arquipélago situado na região de Vêneto, no nordeste da Itália, formado por 118 ilhas interligadas por 177 canais e 400 pontes.
+                            <p class="aboutLocationP" id="veneza-p">
+                                Veneza (Venezia, em italiano), com 338 mil habitantes, é uma das mais belas
+                                cidades do mundo - e também uma das mais turísticas.<br>
+                                A cidade é um museu a céu aberto, romântico em nível quase inimaginável e atrai
+                                multidões de turistas o ano inteiro. Construída no século V sobre uma lagoa,
+                                Veneza é um arquipélago situado na região de Vêneto, no nordeste da Itália,
+                                formado por 118 ilhas interligadas por 177 canais e 400 pontes.
                             </p>
                             <p>Alimentação + passeio de gondôla</p>
                             <!-- Nova implementação validação de form modo tradicional -->
                             <form id="checkDaysInVeneza" onsubmit="return checkDays1()">
                                 <p>Quantos dias:
-                                    <input type="number" id="numDays1">
+                                    <input class="howManyDaysForm" type="number" id="numDays1">
                                 </p>
                                 <button type="submit" id="travelToVeneza" class="buy-buttom">Comprar</button>
                                 <p>Pressione "ESC" para ver as viagens compradas!</p>
@@ -61,14 +65,18 @@
                         <figcaption>
                             <h2>Londres</h2>
                             <p class="aboutLocationP" id="london-p">
-                                A capital do Reino Unido é uma das maiores cidades da Europa e a mais visitada do Mundo, um dos pontos de referência histórica e cultural. Londres é uma cidade mágica, onde tudo existe, tudo acontece, tudo é possível, é única.<br>
-                                A cidade é também um paraíso de cultura, com mais de 200 museus e quatro áreas classificadas como Património Mundial, uma cidade impressionante, na qual passar umas férias é sinónimo de diversão, passeios incríveis e, sobretudo, de numerosas coisas para ver,
-                                visitar e fazer.
+                                A capital do Reino Unido é uma das maiores cidades da Europa e a mais visitada
+                                do Mundo, um dos pontos de referência histórica e cultural. Londres é uma cidade
+                                mágica, onde tudo existe, tudo acontece, tudo é possível, é única.<br>
+                                A cidade é também um paraíso de cultura, com mais de 200 museus e quatro áreas
+                                classificadas como Património Mundial, uma cidade impressionante, na qual passar
+                                umas férias é sinónimo de diversão, passeios incríveis e, sobretudo, de
+                                numerosas coisas para ver, visitar e fazer.
                             </p>
                             <p>Alimentação + passeio turístico histórico</p>
                             <form id="checkDaysInLondon" onsubmit="return checkDays2()">
                                 <p>Quantos dias:
-                                    <input type="number" id="numDays2">
+                                    <input class="howManyDaysForm" type="number" id="numDays2">
                                 </p>
                                 <button type="submit" id="travelToLondon" class="buy-buttom">Comprar</button>
                                 <p>Pressione "ESC" para ver as viagens compradas!</p>
@@ -82,12 +90,22 @@
                         <figcaption>
                             <h2>Egito</h2>
                             <p class="aboutLocationP" id="egipt-p">
-                                Terra dos mistérios, superstições e da moderna arqueologia, o Egito fascina com sua rica história, grandes monumentos e o poderoso rio Nilo.
-                                A cidade do Cairo é a porta de entrada para o país, contando com um dos mais incríveis museus do planeta, o Museu do Cairo, repleto de múmias, sarcófagos, esculturas e outras preciosidades. Pena que sua organização seja péssima, com uma curadoria idem. Caótica, barulhenta e dinâmica, a cidade possui um trânsito infernal, mas sobra charme. Próximo ao centro está o platô de Gizé, com as grandes pirâmides de Quéops, Quéfren e Miquerinos e a famosa esfinge.<br>
+                                Terra dos mistérios, superstições e da moderna arqueologia, o Egito fascina com
+                                sua rica história, grandes monumentos e o poderoso rio Nilo. A cidade do Cairo é
+                                a porta de entrada para o país, contando com um dos mais incríveis museus do
+                                planeta, o Museu do Cairo, repleto de múmias, sarcófagos, esculturas e outras
+                                preciosidades. Pena que sua organização seja péssima, com uma curadoria idem.
+                                Caótica, barulhenta e dinâmica, a cidade possui um trânsito infernal, mas sobra
+                                charme. Próximo ao centro está o platô de Gizé, com as grandes pirâmides de
+                                Quéops, Quéfren e Miquerinos e a famosa esfinge.<br>
                             </p>
                             <p>Alimentação + passeio de camelo</p>
-                            <button id="travelToEgipt" class="buy-buttom">Comprar</button>
-                            <p>Pressione "ESC" para ver as viagens compradas!</p>
+                            <!-- FIX THIS -->
+                            <form id="checkDaysInEgipt" onsubmit="return checkDays3()">
+                                <input type="number" id="daysInEgipt" required min="1" max="10">
+                                <button type="submit" id="travelToEgipt" class="buy-buttom">Comprar</button>
+                                <p>Pressione "ESC" para ver as viagens compradas!</p>
+                            </form>
                         </figcaption>
                     </figure>
                 </article>

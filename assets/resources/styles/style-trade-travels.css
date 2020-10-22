@@ -43,8 +43,9 @@ footer {
 }
 
 input {
+    align-items: center;
     padding: 0.2rem;
-    width: 15rem;
+    width: 70%;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     border: 1px solid #999;
@@ -99,4 +100,8 @@ textarea{
     text-align: justify;
     text-indent: 3%;
     font-style: italic;
+}
+
+.howManyDaysForm{
+    max-width: 150px;
 }
