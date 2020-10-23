@@ -14,7 +14,7 @@ function getNome() {
    }
 }
 
-document.querySelector('#go-down-button').addEventListener('click', ()=> {
+document.querySelector('#go-down-button').addEventListener('click', function() {
         window.scrollTo(0, 630);
 });
 
