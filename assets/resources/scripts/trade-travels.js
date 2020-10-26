@@ -1,13 +1,15 @@
 class Usuario {
-    constructor(nome, email) {
+    constructor(nome, email, cpf, cep) {
         this.nome = nome;
         this.email = email;
+        this.cpf = cpf;
+        this.cep = cep;
     }
 }
 
 class Cliente extends Usuario {
-    constructor(nome, email, telefone) {
-        super(nome, email);
+    constructor(nome, email, cpf, cep, telefone) {
+        super(nome, email, cpf, cep );
         if(checkNumberFunction() === true){
             this.telefone = telefone;
         }
@@ -26,24 +28,59 @@ let Travel = function(destino, dias) {
     this.dias = dias;
 };
 
+// Criação de Usuário
 let nomeFromForm;
 let emailFromForm;
 var users = [];
-let getUserName = document.getElementsByTagName('input')[0];
-let getUserEmail = document.getElementsByName('form2')[0];
 document.querySelector('#create-login-button').addEventListener('click', function () {
-    // var getUserName = document.getElementsByTagName('input')[0]
+    let getUserName = document.getElementsByTagName('input')[0];
     nomeFromForm = getUserName.value;
     nomeSub = nomeFromForm.substring(0, 1);
     nomeSub2 = nomeFromForm.substring(1,nomeFromForm.length);
     nomeSub = nomeSub.toUpperCase();
     nomeFull = nomeSub + nomeSub2;
-    // var getUserEmail = document.getElementsByName('form2')
+    let getUserEmail = document.getElementsByName('form2')[0];
     emailFromForm = getUserEmail.value;
-    var user = new Cliente(nomeFull, emailFromForm.toLowerCase());
-    users.push(user);
-    alert('Usuário criado com sucesso!');
+    let cpf = document.forms[0].cpfInput.value;
+    let cep = document.forms[0].cepInput.value;
+    if((checkCEP === true) && (checkCPF === true)){
+        let user = new Cliente(nomeFull, emailFromForm.toLowerCase(), cpf, cep);
+        users.push(user);
+        console.log(users[0]);
+        alert('Usuário criado com sucesso!');
+    }else{
+        alert('AVISO: Dados inválidos!');
+    }
 });
+
+let checkCPF = false;
+let checkCEP = false;
+window.onload = function(){
+    let cpfInputValue = document.querySelector('#cpfInput').value;
+    cpfInputValue.addEventListener('blur', function(){
+        //FIX
+        let pattern = new RegExp('');
+        if(pattern.test() === true){
+            console.log("verificação cpf certo!");
+            checkCPF = true;
+        }else{
+            console.log("verificação cpf errado");
+            checkCPF = false;
+        }
+    });
+
+    let cepInputValue = document.querySelector('#cepInput').value;
+    cepInput.addEventListener('blur', function(){
+        let pattern = new RegExp(cepInputValue);
+        if(pattern === true){
+            console.log("verificação cep certo!");
+            checkCEP = true;
+        }else{
+            console.log("verificação cep errado");
+            checkCEP = false;
+        }
+    });
+};
 
 let formNome = document.querySelector('#nome');
 formNome.addEventListener('focus', function() {
