@@ -59,8 +59,8 @@ window.onload = function(){
     let cpfInputValue = document.querySelector('#cpfInput').value;
     cpfInputValue.addEventListener('blur', function(){
         //FIX
-        let pattern = new RegExp('');
-        if(pattern.test() === true){
+        let pattern = new RegExp('\d{3}\.?\d{3}\.?\d{3}-?\d{2}');
+        if(pattern.test(cpfInputValue) === true){
             console.log("verificação cpf certo!");
             checkCPF = true;
         }else{
@@ -71,8 +71,8 @@ window.onload = function(){
 
     let cepInputValue = document.querySelector('#cepInput').value;
     cepInput.addEventListener('blur', function(){
-        let pattern = new RegExp(cepInputValue);
-        if(pattern === true){
+        let pattern = new RegExp('\d{5}-\d{3}');
+        if(pattern.test(cpfInputValue) === true){
             console.log("verificação cep certo!");
             checkCEP = true;
         }else{
