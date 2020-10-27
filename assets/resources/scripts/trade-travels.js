@@ -112,8 +112,8 @@ var buyButtonVeneza = document
             .numDays1
             .value;
         e.preventDefault();
-        if ((checkUsuario() == true) && (checkDay1 == true)) {
-            travels.push(new Travel("Veneza", daysVeneza));
+        if ((checkUsuario() === true) && (checkDay1 === true)) {
+            travels.push(new Travel('Veneza', daysVeneza));
             alert('Compra efetivada!');
         }
     });
@@ -126,8 +126,8 @@ var buyButtonLondon = document
             .numDays2
             .value;
         e.preventDefault();
-        if ((checkUsuario() == true) && (checkDay1 == true)) {
-            travels.push(new Travel("Londres", daysLondon));
+        if ((checkUsuario() === true) && (checkDay1 === true)) {
+            travels.push(new Travel('Londres', daysLondon));
             alert('Compra efetivada!');
         }
     });
@@ -147,7 +147,7 @@ let telefone;
 })();
 
 var checkNumberFunction = function () {
-    if (telefone != null) {
+    if (telefone !== null) {
         return true;
     } else {
         return false;
@@ -162,16 +162,16 @@ document
 
 //Controle de compra de viagens
 var checkUsuario = function () {
-    if (checkIfIsAnyUserIsCreated() == false) {
+    if (checkIfIsAnyUserIsCreated() === false) {
         window.alert('AVISO:É necessário criar um usuário para efetivar a compra!');
         return false;
-    } else if (checkIfIsAnyUserIsCreated() == true) {
+    } else if (checkIfIsAnyUserIsCreated() === true) {
         return true;
     }
 };
 
 var checkIfIsAnyUserIsCreated = function () {
-    if (users.length == 0) {
+    if (users.length === 0) {
         return false;
     } else {
         return true;
@@ -280,7 +280,7 @@ function checkDays1() {
         .forms[1]
         .numDays1
         .value;
-    if ((daysValue < 0) || (daysValue > 10) || (daysValue == null) || (daysValue == "")) {
+    if ((daysValue < 0) || (daysValue > 10) || (daysValue === null) || (daysValue === "")) {
         checkDay1 = false;
         return false;
     } else {
@@ -295,11 +295,11 @@ function checkDays2() {
         .forms[2]
         .numDays2
         .value;
-    if ((daysValue < 0) || (daysValue > 10) || (daysValue == null) || (daysValue == "")) {
-        checkDay1 = false;
+    if ((daysValue < 0) || (daysValue > 10) || (daysValue === null) || (daysValue === "")) {
+        checkDay2 = false;
         return false;
     } else {
-        checkDay1 = true;
+        checkDay2 = true;
         return true;
     }
 }
