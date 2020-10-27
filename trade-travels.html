@@ -22,7 +22,7 @@
             <menu>
                 <article class="sign-in">
                     <p id="h2-create-user">Crie seu Usuário:</p>
-                    <form>
+                    <form id="formCreateUser">
                         <div class="form-space">
                             <label for="nome">Nome:</label>
                             <input type="text" id="nome" name="form1">
@@ -39,8 +39,8 @@
                             <label for="cpf">CEP :</label>
                             <input type="text" id="cepInput" name="form4" pattern="\d{5}-\d{3}">
                         </div>
+                        <button id="create-login-button">Criar Usuário</button>
                     </form>
-                    <button id="create-login-button">Criar Usuário</button>
                 </article>
                 <article class="travel-for-sale-container">
                     <figure>
@@ -125,14 +125,6 @@
                     <p>Tem alguma ideia de viagem?Deixe um comentário e clique duas vezes no espaço
                         para enviar!</p>
                     <textarea id="comentSpace" ondblclick="postComentTradePage(comentSpace.value)"></textarea>
-                    <div class="stars">
-                        <p>⭐
-                            <input type="checkbox" id="1star" value="1"></p>
-                        <p>⭐⭐⭐
-                            <input type="checkbox" id="3star" value="3"></p>
-                        <p>⭐⭐⭐⭐⭐
-                            <input type="checkbox" id="5star" value="5"></p>
-                    </div>
                 </form>
             </div>
         </div>

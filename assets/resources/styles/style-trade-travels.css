@@ -61,8 +61,10 @@ input {
     border: 2px black solid;
 }
 
-textarea{
-    max-width: 100px;
+#comentSpace{
+    text-align: center;
+    max-width: 150px;
+    min-height: 35px;
 }
 
 #create-login-button, .buy-buttom{
@@ -85,15 +87,6 @@ textarea{
 #h2-create-user{
     font-size: 1.3rem;
     font-weight: bold;
-}
-
-.stars{
-    font-size: 12px;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    margin-bottom: 2%;
 }
 
 .aboutLocationP{

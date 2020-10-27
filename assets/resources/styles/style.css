@@ -129,6 +129,22 @@ footer {
     word-spacing: 15px;
 }
 
+.rateUsStars p{
+    line-height: 2rem;
+    text-align: center;
+}
+
+.rateUsStars{
+    width: 100%;
+    align-items: center;
+}
+
+#rateUsButton{
+    margin: 0 auto;
+    padding:3%;
+    align-items: center;
+}
+
 /* Tamanho do título e botão para dispositivos mobile */
 @media screen and (max-width: 546px){
     .title{

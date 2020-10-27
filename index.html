@@ -4,7 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="assets/resources/styles/style.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap"
+            rel="stylesheet">
         <link
             rel="stylesheet"
             href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
@@ -45,7 +47,10 @@
                 <article class="box-container">
                     <h2 id="subtitle-first-article">Viajar é Bom!</h2>
                     <figure >
-                        <img id="traveling-is-great-pic" src="assets/resources/images/couple-pic.jpg" alt="couple-pic">
+                        <img
+                            id="traveling-is-great-pic"
+                            src="assets/resources/images/couple-pic.jpg"
+                            alt="couple-pic">
                         <figcaption>
                             <h3 id="textarea-first-article-h3">Veja alguns benefícios de viajar!</h3>
                             <p id="benefits-space"></p>
@@ -55,14 +60,32 @@
                 <article class="box-container">
                     <h2 id="subtitle-covid">Viaje com Tranquilidade e Segurança</h2>
                     <figure>
-                        <img src="assets/resources/images/covid-19-pic.jpg" id="anti-covid-19-pic" alt="covid-safety">
+                        <img
+                            src="assets/resources/images/covid-19-pic.jpg"
+                            id="anti-covid-19-pic"
+                            alt="covid-safety">
                         <figcaption>
                             <h3 id="subtitle-certified-protection">Proteção Certificada!</h3>
-                            <p>Para garantir a sua segurança, a Bonfim Viagens conta com uma equipe preparada para oferecer o
-                                melhor cuidado em relação a saúde dos nossos clientes!
+                            <p>Para garantir a sua segurança, a Bonfim Viagens conta com uma equipe
+                                preparada para oferecer o melhor cuidado em relação a saúde dos nossos clientes!
                             </p>
                         </figcaption>
                     </figure>
+                </article>
+                <article class="box-container">
+                    <div class="stars">
+                        <form class="rateUsStars" onsubmit="return validaCheckboxes()">
+                            <h2 id="subtitle-RateStars">Nos Avalie!</h2>
+                            <p>Já Viajou conosco? Como foi sua última experiência com a Bonfim Viagens?</p>
+                            <p>
+                                <input type="checkbox" name="stars" value="1">⭐</p>
+                            <p>
+                                <input type="checkbox" name="stars" value="3">⭐⭐⭐</p>
+                            <p>
+                                <input type="checkbox" name="stars" value="5">⭐⭐⭐⭐⭐</p>
+                            <button id="rateUsButton">Enviar Avaliação</button>
+                        </form>
+                    </div>
                 </article>
             </div>
         </main>
