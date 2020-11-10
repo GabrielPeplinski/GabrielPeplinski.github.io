@@ -40,6 +40,15 @@ window.onload = function () {
             this.setCustomValidity('Preenchido corretamente!');
         }
     });
+
+    let cepInput = document.querySelector('#cepInput');
+    cepInput.addEventListener('blur', function(){
+        if(this.validity.invalid){
+            this.setCustomValidity('AVISO: Preencha o CEP da maneira correta!');
+        }else{
+            this.setCustomValidity('Preenchido corretamente!');
+        }
+    });
 };
 
 // Criação de Usuário
@@ -57,20 +66,28 @@ document
         let nomeFull = nomeSub + nomeSub2;
         let getUserEmail = document.getElementsByName('form2')[0];
         emailFromForm = getUserEmail.value;
-        let cpf = document
-            .forms[0]
-            .cpfInput
-            .value;
+        let cpf = document.forms[0].cpfInput.value;
         console.log(cpf);
-        let cep = document
-            .forms[0]
-            .cepInput
-            .value;
+        let cep = document.forms[0].cepInput.value;
         console.log(cep);
-        let user = new Cliente(nomeFull, emailFromForm.toLowerCase(), cpf, cep);
-        users.push(user);
-        console.log(users[0]);
-        alert('Usuário criado com sucesso!');
+
+        if ((nomeFromForm !== null && nomeFromForm !== " ") && (emailFromForm !== null && emailFromForm !== " ")){
+            let user = new Cliente(nomeFull, emailFromForm.toLowerCase(), cpf, cep);
+            users.push(user);
+            console.log(users[0]);
+            // JSON
+            localStorage.setItem('userClient', JSON.stringify(user));
+            let a = JSON.parse(localStorage.getItem('userClient'));
+            console.log(a);
+            alert('Usuário criado com sucesso!');
+        
+            //Web Storage
+            localStorage.setItem('username', nomeFromForm);
+            console.log(localStorage.getItem('username'));
+            
+        }else{
+            alert('AVISO: Preencha o nome e email!');
+        }
         e.preventDefault();
     });
 
@@ -142,8 +159,8 @@ screen.onload = function () {
 let telefone;
 (function () {
     setTimeout(function () {
-        telefone = prompt('Gostaria de nos dizer seu telefone?');
-    }, 3000);
+        telefone = prompt(`Gostaria de nos informar seu telefone ${localStorage.getItem('username')}?`);
+    }, 8000);
 })();
 
 var checkNumberFunction = function () {
