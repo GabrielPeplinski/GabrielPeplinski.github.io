@@ -58,6 +58,7 @@ var users = [];
 document
     .querySelector('#formCreateUser')
     .addEventListener('submit', function (e) {
+        e.preventDefault();
         let getUserName = document.getElementsByTagName('input')[0];
         nomeFromForm = getUserName.value;
         let nomeSub = nomeFromForm.substring(0, 1);
@@ -75,21 +76,25 @@ document
             let user = new Cliente(nomeFull, emailFromForm.toLowerCase(), cpf, cep);
             users.push(user);
             console.log(users[0]);
+
             // JSON
             localStorage.setItem('userClient', JSON.stringify(user));
             let a = JSON.parse(localStorage.getItem('userClient'));
             console.log(a);
             alert('Usuário criado com sucesso!');
-        
-            //Web Storage
-            localStorage.setItem('username', nomeFromForm);
-            console.log(localStorage.getItem('username'));
-            
+
+            //Usuário Logado
+            document.querySelector('#userNameLogin').innerHTML = getUsernameFromJSON();
+            showUserlogin();
         }else{
             alert('AVISO: Preencha o nome e email!');
         }
-        e.preventDefault();
+        
     });
+
+function showUserlogin(){
+    document.getElementById('userNameLogin').style.display = 'inline';
+}
 
 let formNome = document.querySelector('#nome');
 formNome.addEventListener('focus', function () {
@@ -119,6 +124,36 @@ formEmail.addEventListener('blur', function () {
         .getElementById('email')
         .style
         .backgroundColor = "#CFCFCF";
+});
+
+let formCPF = document.querySelector('#cpfInput');
+formCPF.addEventListener('focus', function () {
+    document
+        .getElementById('cpfInput')
+        .style
+        .backgroundColor = "#EEAD0E";
+});
+
+formCPF.addEventListener('blur', function(){
+    document
+    .getElementById('cpfInput')
+    .style
+    .backgroundColor = "#CFCFCF";
+});
+
+let formCEP = document.querySelector('#cepInput');
+formCEP.addEventListener('focus', function () {
+    document
+        .getElementById('cepInput')
+        .style
+        .backgroundColor = "#EEAD0E";
+});
+
+formCEP.addEventListener('blur', function(){
+    document
+    .getElementById('cepInput')
+    .style
+    .backgroundColor = "#CFCFCF";
 });
 
 var buyButtonVeneza = document
@@ -160,7 +195,7 @@ let telefone;
 (function () {
     setTimeout(function () {
         telefone = prompt(`Gostaria de nos informar seu telefone ${localStorage.getItem('username')}?`);
-    }, 8000);
+    }, 5000);
 })();
 
 var checkNumberFunction = function () {
@@ -328,4 +363,21 @@ function checkDays3() {
     } else {
         alert('AVISO:É necessário criar um usuário para efetivar a compra!');
     }
+}
+
+
+//Web Storage
+(()=> {
+    let nameFromPrompt = window.prompt('Qual seu nome?');
+    localStorage.setItem('username', nameFromPrompt);
+    console.log(localStorage.getItem('username'));
+})();
+
+//Recuperando JSON
+let usernameFromJSON;
+function getUsernameFromJSON(){
+    let userCreated = JSON.parse(localStorage.getItem('userClient'));
+    usernameFromJSON = userCreated.nome;
+    console.log(usernameFromJSON);
+    return usernameFromJSON;
 }

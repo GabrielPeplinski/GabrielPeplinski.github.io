@@ -88,4 +88,4 @@
 **Web Storage**
 - [x] LocalStorage ou SessionStorage
 - [x] Leitura e escrita de dados simples
-- [ ] Leitura e escrita de JSON
+- [x] Leitura e escrita de JSON

@@ -20,8 +20,6 @@
             window.scrollTo(0, 630);
     });
     
-    //Beneficios - Button
-    //usar var inverted =
     var benefits1 = [
         'Fuga da rotina',
         'Maior criatividade',

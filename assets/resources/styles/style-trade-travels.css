@@ -98,3 +98,7 @@ input {
 .howManyDaysForm{
     max-width: 150px;
 }
+
+#userNameLogin{
+    display: none;
+}
