@@ -258,11 +258,10 @@ document
         window.document.forms.commentSection.comentSpace.value = '';
     });
 
-document
-    .querySelector('#comentSpace')
-    .addEventListener('blur', function () {
-        window.document.forms.commentSection.comentSpace.value = 'Deixe seu comentário!';
-    });
+$('#comentSpace').on('blur', function(){
+    console.log('oii');
+    $('#commentSection>textarea').val('Deixe seu comentário!');
+});
 
 let h2CreateUserMessage = document.querySelector('#h2-create-user');
 

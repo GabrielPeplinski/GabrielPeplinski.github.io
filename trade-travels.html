@@ -10,6 +10,7 @@
             integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
             crossorigin="anonymous">
         <title>Bonfim Viagens</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body>
         <header>
@@ -19,8 +20,7 @@
             </div>
             <br>
             <i class="fas fa-user"></i>
-            <p id="userNameLogin">
-            </p>
+            <p id="userNameLogin"></p>
         </header>
         <div class="site-size">
             <menu>
@@ -29,15 +29,19 @@
                     <form id="formCreateUser">
                         <div class="form-space">
                             <label for="nome">Nome:</label>
-                            <input type="text" id="nome" name="form1" required>
+                            <input type="text" id="nome" name="form1" required="required">
                         </div>
                         <div class="form-space">
                             <label for="email">Email:</label>
-                            <input type="text" id="email" name="form2" required>
+                            <input type="text" id="email" name="form2" required="required">
                         </div>
                         <div class="form-space">
                             <label for="cpf">CPF :</label>
-                            <input type="text" id="cpfInput" name="form3" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}">
+                            <input
+                                type="text"
+                                id="cpfInput"
+                                name="form3"
+                                pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}">
                         </div>
                         <div class="form-space">
                             <label for="cpf">CEP :</label>
@@ -114,7 +118,13 @@
                             <p>Alimentação + passeio de camelo</p>
                             <form id="checkDaysInEgipt" onsubmit="return checkDays3()">
                                 <p>Quantos dias:
-                                    <input class="howManyDaysForm" type="number" id="numDays3" required="required" min="1" max="10">
+                                    <input
+                                        class="howManyDaysForm"
+                                        type="number"
+                                        id="numDays3"
+                                        required="required"
+                                        min="1"
+                                        max="10">
                                 </p>
                                 <button type="submit" id="travelToEgipt" class="buy-buttom">Comprar</button>
                                 <p>Pressione "ESC" para ver as viagens compradas!</p>
