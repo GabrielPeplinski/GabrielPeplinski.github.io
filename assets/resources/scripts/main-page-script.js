@@ -62,6 +62,9 @@
         e.preventDefault();
     });
     
+    $('.site-size +button').on('click', function(){
+        console.log('deu certo');
+    });
 }());
 
 function getCidade() {

@@ -104,26 +104,16 @@ formNome.addEventListener('focus', function () {
         .backgroundColor = "#EEAD0E";
 });
 
-formNome.addEventListener('blur', function () {
-    document
-        .getElementById("nome")
-        .style
-        .backgroundColor = "#CFCFCF";
+$('#formCreateUser input').on('blur', function(){
+    $('#email').css("background-color","#CFCFCF");
 });
 
 let formEmail = document.querySelector('#email');
 formEmail.addEventListener('focus', function () {
     document
         .getElementById('email')
-        .style
+        .style       
         .backgroundColor = "#EEAD0E";
-});
-
-formEmail.addEventListener('blur', function () {
-    document
-        .getElementById('email')
-        .style
-        .backgroundColor = "#CFCFCF";
 });
 
 let formCPF = document.querySelector('#cpfInput');
@@ -134,26 +124,12 @@ formCPF.addEventListener('focus', function () {
         .backgroundColor = "#EEAD0E";
 });
 
-formCPF.addEventListener('blur', function(){
-    document
-    .getElementById('cpfInput')
-    .style
-    .backgroundColor = "#CFCFCF";
-});
-
 let formCEP = document.querySelector('#cepInput');
 formCEP.addEventListener('focus', function () {
     document
         .getElementById('cepInput')
         .style
         .backgroundColor = "#EEAD0E";
-});
-
-formCEP.addEventListener('blur', function(){
-    document
-    .getElementById('cepInput')
-    .style
-    .backgroundColor = "#CFCFCF";
 });
 
 var buyButtonVeneza = document
@@ -259,23 +235,18 @@ document
     });
 
 $('#comentSpace').on('blur', function(){
-    console.log('oii');
     $('#commentSection>textarea').val('Deixe seu comentário!');
 });
 
 let h2CreateUserMessage = document.querySelector('#h2-create-user');
 
-document
-    .querySelector('.sign-in')
-    .addEventListener('mouseover', function () {
-        h2CreateUserMessage.innerHTML = 'Criando Usuário...';
-    });
+$('.sign-in').on('mouseover', function(){
+    h2CreateUserMessage.innerHTML = 'Criando Usuário...';
+});
 
-document
-    .querySelector('.sign-in')
-    .addEventListener('mouseout', function () {
-        h2CreateUserMessage.innerHTML = 'Crie seu Usuário:';
-    });
+$('.sign-in').on('mouseout', function(){
+    $('.sign-in +p').val('Crie seu Usuário:');
+});
 
 window.onload = function () {
     let inputCamp = document.querySelector('#numDays3');
@@ -380,3 +351,9 @@ function getUsernameFromJSON(){
     console.log(usernameFromJSON);
     return usernameFromJSON;
 }
+
+$('.comentSpaceSection').on('focus', function(){
+    console.log('oie');
+    $('textarea').css('background-color', '#EEAD0E').
+    $('textarea').css('font-color', 'white');
+});
