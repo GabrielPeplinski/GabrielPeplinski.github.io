@@ -2,7 +2,7 @@
 
 *Projeto da Disciplina de Desenvolvimento para WEB II, desenvolvido por Gabriel Souza Peplinski* 
 
-*Link para Relatório sobre o Projeto :* https://docs.google.com/document/d/1lx2YdT-leds5kpCNmdOMTJauNCehlKAkIkNJuFXWsgM/edit?usp=sharing
+*Link para Relatório sobre o Projeto :* https://docs.google.com/document/d/1HoVrN-nRgI2xjEgDqZ6716YKK19nFC4pDE1yiqP_f7c/edit?usp=sharing
 
 **Caixas de Diálogo**
 
