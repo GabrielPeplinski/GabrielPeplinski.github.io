@@ -1,3 +1,7 @@
+window.onload = function(){
+    $('#cepInput').mask('00000-000');
+};
+
 class Usuario {
     constructor(nome, email, cpf, cep) {
         this.nome = nome;
@@ -86,6 +90,7 @@ document
             //Usuário Logado
             document.querySelector('#userNameLogin').innerHTML = getUsernameFromJSON();
             showUserlogin();
+            hideUserCreate();
         }else{
             alert('AVISO: Preencha o nome e email!');
         }
@@ -104,9 +109,9 @@ formNome.addEventListener('focus', function () {
         .backgroundColor = "#EEAD0E";
 });
 
-$('#formCreateUser input').on('blur', function(){
-    $('#email').css("background-color","#CFCFCF");
-});
+// $('#formCreateUser input').on('blur', function(){
+//     $('#email').css('background-color','#CFCFCF');
+// });
 
 let formEmail = document.querySelector('#email');
 formEmail.addEventListener('focus', function () {
@@ -130,6 +135,10 @@ formCEP.addEventListener('focus', function () {
         .getElementById('cepInput')
         .style
         .backgroundColor = "#EEAD0E";
+});
+
+$('.form-space').children('input').on('blur', function(){
+    $('.form-space').children('input').css('background-color','#CFCFCF');
 });
 
 var buyButtonVeneza = document
@@ -245,7 +254,7 @@ $('.sign-in').on('mouseover', function(){
 });
 
 $('.sign-in').on('mouseout', function(){
-    $('.sign-in +p').val('Crie seu Usuário:');
+    $('#logoUser +p').text('Crie seu Usuário:');
 });
 
 window.onload = function () {
@@ -335,7 +344,6 @@ function checkDays3() {
     }
 }
 
-
 //Web Storage
 (()=> {
     let nameFromPrompt = window.prompt('Qual seu nome?');
@@ -353,7 +361,30 @@ function getUsernameFromJSON(){
 }
 
 $('.comentSpaceSection').on('focus', function(){
-    console.log('oie');
-    $('textarea').css('background-color', '#EEAD0E').
-    $('textarea').css('font-color', 'white');
+    $('textarea').css('background-color', '#EEAD0E');
 });
+
+//Efeito Fade nas Imagens
+$('.imgTravels').on('mouseover', function(){
+    $('.travelName').next('img').fadeOut('slow');
+});
+
+$('.imgTravels').on('mouseout', function(){
+    $('.imgTravels').fadeIn('fast');
+});
+
+function hideUserCreate(){
+    $('#logoUser').parent().addClass('hidePart');
+    $('.hidePart').hide();
+}
+
+//Ajax
+function getUsandoDados() {
+    let parametros = {
+        nome: getUsernameFromJSON()
+    };
+    var servico = "http://localhost:3000/usuario-criado";
+    $.get(servico, parametros, function (data) {
+        console.log(data);
+    });
+}

@@ -60,10 +60,7 @@
     
     document.querySelector('.rateUsStars').addEventListener('submit', function(e){
         e.preventDefault();
-    });
-    
-    $('.site-size +button').on('click', function(){
-        console.log('deu certo');
+        $('.box-container form').hide();
     });
 }());
 

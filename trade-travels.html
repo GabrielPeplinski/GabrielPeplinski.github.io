@@ -25,6 +25,7 @@
         <div class="site-size">
             <menu>
                 <article class="sign-in">
+                    <i id="logoUser" class="fas fa-user"></i>
                     <p id="h2-create-user">Crie seu Usuário:</p>
                     <form id="formCreateUser">
                         <div class="form-space">
@@ -44,17 +45,17 @@
                                 pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}">
                         </div>
                         <div class="form-space">
-                            <label for="cpf">CEP :</label>
+                            <label for="cep">CEP :</label>
                             <input type="text" id="cepInput" name="form4" pattern="\d{5}-\d{3}">
                         </div>
                         <button id="create-login-button">Criar Usuário</button>
                     </form>
                 </article>
-                <article class="travel-for-sale-container">
+                <article id="article1" class="travel-for-sale-container">
                     <figure>
-                        <img src="assets/resources/images/place1-pic.jpg" alt="travel-pic-1">
+                        <h2 class="travelName">Veneza</h2>
+                        <img class="imgTravels" src="assets/resources/images/place1-pic.jpg" alt="travel-pic-1">
                         <figcaption>
-                            <h2>Veneza</h2>
                             <p class="aboutLocationP" id="veneza-p">
                                 Veneza (Venezia, em italiano), com 338 mil habitantes, é uma das mais belas
                                 cidades do mundo - e também uma das mais turísticas.<br>
@@ -75,11 +76,11 @@
                         </figcaption>
                     </figure>
                 </article>
-                <article class="travel-for-sale-container">
+                <article id="article2" class="travel-for-sale-container">
                     <figure>
-                        <img src="assets/resources/images/place2-pic.jpg" alt="travel-pic-2">
+                        <h2 class="travelName">Londres</h2>
+                        <img class="imgTravels" src="assets/resources/images/place2-pic.jpg" alt="travel-pic-2">
                         <figcaption>
-                            <h2>Londres</h2>
                             <p class="aboutLocationP" id="london-p">
                                 A capital do Reino Unido é uma das maiores cidades da Europa e a mais visitada
                                 do Mundo, um dos pontos de referência histórica e cultural. Londres é uma cidade
@@ -100,11 +101,11 @@
                         </figcaption>
                     </figure>
                 </article>
-                <article class="travel-for-sale-container">
+                <article id="article3" class="travel-for-sale-container">
                     <figure>
-                        <img src="assets/resources/images/place3-pic.jpg" alt="travel-pic-3">
+                        <h2 class="travelName">Egito</h2>
+                        <img class="imgTravels" src="assets/resources/images/place3-pic.jpg" alt="travel-pic-3">
                         <figcaption>
-                            <h2>Egito</h2>
                             <p class="aboutLocationP" id="egipt-p">
                                 Terra dos mistérios, superstições e da moderna arqueologia, o Egito fascina com
                                 sua rica história, grandes monumentos e o poderoso rio Nilo. A cidade do Cairo é
@@ -147,5 +148,6 @@
             <span>Todos os direitos reservados</span>
         </footer>
         <script src="assets/resources/scripts/trade-travels.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
     </body>
 </html>
