@@ -94,7 +94,7 @@ document
         }else{
             alert('AVISO: Preencha o nome e email!');
         }
-        
+        console.log(e);
     });
 
 function showUserlogin(){
@@ -106,7 +106,7 @@ formNome.addEventListener('focus', function () {
     document
         .getElementById('nome')
         .style
-        .backgroundColor = "#EEAD0E";
+        .backgroundColor = '#EEAD0E';
 });
 
 // $('#formCreateUser input').on('blur', function(){
@@ -126,7 +126,7 @@ formCPF.addEventListener('focus', function () {
     document
         .getElementById('cpfInput')
         .style
-        .backgroundColor = "#EEAD0E";
+        .backgroundColor = '#EEAD0E';
 });
 
 let formCEP = document.querySelector('#cepInput');
@@ -134,7 +134,7 @@ formCEP.addEventListener('focus', function () {
     document
         .getElementById('cepInput')
         .style
-        .backgroundColor = "#EEAD0E";
+        .backgroundColor = '#EEAD0E';
 });
 
 $('.form-space').children('input').on('blur', function(){
@@ -362,6 +362,10 @@ function getUsernameFromJSON(){
 
 $('.comentSpaceSection').on('focus', function(){
     $('textarea').css('background-color', '#EEAD0E');
+});
+
+$('.comentSpaceSection').on('blur', function(){
+    $('textarea').css('background-color', 'white');
 });
 
 //Efeito Fade nas Imagens
