@@ -52,7 +52,7 @@
         location.innerHTML = benefits[i];
         i++;
         if(i > benefits.length){
-            location.innerHTML = "Viajar é Bom!";
+            location.innerHTML = 'Viajar é Bom!';
         }
         }
         plusOne();
