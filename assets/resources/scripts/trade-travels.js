@@ -109,10 +109,6 @@ formNome.addEventListener('focus', function () {
         .backgroundColor = '#EEAD0E';
 });
 
-// $('#formCreateUser input').on('blur', function(){
-//     $('#email').css('background-color','#CFCFCF');
-// });
-
 let formEmail = document.querySelector('#email');
 formEmail.addEventListener('focus', function () {
     document
@@ -141,7 +137,7 @@ $('.form-space').children('input').on('blur', function(){
     $('.form-space').children('input').css('background-color','#CFCFCF');
 });
 
-var buyButtonVeneza = document
+let buyButtonVeneza = document
     .querySelector('#checkDaysInVeneza')
     .addEventListener('submit', function (e) {
         let daysVeneza = document
@@ -155,7 +151,7 @@ var buyButtonVeneza = document
         }
     });
 
-var buyButtonLondon = document
+let buyButtonLondon = document
     .querySelector('#checkDaysInLondon')
     .addEventListener('submit', function (e) {
         let daysLondon = document
@@ -334,6 +330,11 @@ function checkDays2() {
         return true;
     }
 }
+
+let buyButtonEgipt = document.querySelector('#checkDaysInEgipt');
+buyButtonEgipt.addEventListener('submit', function(e) {
+    e.preventDefault();
+});
 
 // Validação usando API HTML 5
 function checkDays3() {
