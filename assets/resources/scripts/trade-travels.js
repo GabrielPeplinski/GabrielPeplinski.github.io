@@ -339,6 +339,11 @@ buyButtonEgipt.addEventListener('submit', function(e) {
 // Validação usando API HTML 5
 function checkDays3() {
     if (checkIfIsAnyUserIsCreated() === true) {
+        let daysValue = document
+        .forms[3]
+        .numDays2
+        .value;
+        travels.push(new Travel('Egipt', daysValue));
         alert('Compra efetivada!');
     } else {
         alert('AVISO:É necessário criar um usuário para efetivar a compra!');
